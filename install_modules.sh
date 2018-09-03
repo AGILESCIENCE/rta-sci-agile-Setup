@@ -23,18 +23,18 @@ cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_hermes"
-cd AlarmGenerator_hermes /opt/prod/AGILEPIPE
-./install.sh
+cd AlarmGenerator_hermes
+./install.sh /opt/prod/AGILEPIPE
 cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_morfeoalarm"
-cd AlarmGenerator_morfeoalarm /opt/prod/AGILEPIPE
-./install.sh
+cd AlarmGenerator_morfeoalarm
+./install.sh /opt/prod/AGILEPIPE
 cd ..
 
 echo "---------"
 echo "Installing AlertReceiver_GCNnetwork"
-cd AlertReceiver_GCNnetwork /opt/prod/AGILEPIPE
-./install.sh
+cd AlertReceiver_GCNnetwork
+./install.sh /opt/prod/AGILEPIPE
 cd ..
