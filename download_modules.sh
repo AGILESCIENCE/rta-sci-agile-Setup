@@ -32,8 +32,7 @@ cd AGILE-ALERT-PIPE
 if [ "$2" != "-t" ]; then
 	git checkout $TAG_ALERTPIPE
 else
-	git branch newpipe
-	echo "Use master version"
+        echo "Use master version"
 fi
 cd ..
 
