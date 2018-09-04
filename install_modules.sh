@@ -16,13 +16,6 @@ cd AGILE-ALERT-PIPE
 cd ..
 
 echo "---------"
-echo "Installing AGILE-GRID-scripts"
-module load agile-B25-r5
-cd AGILE-GRID-scripts
-./install.sh
-cd ..
-
-echo "---------"
 echo "Installing AlarmGenerator_hermes"
 cd AlarmGenerator_hermes
 ./install.sh /opt/prod/AGILEPIPE

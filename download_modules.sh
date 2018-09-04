@@ -76,12 +76,3 @@ else
 fi
 cd ..
 
-echo "--------------"
-git clone https://$1@github.com/AGILESCIENCE/AGILE-GRID-scripts.git
-cd AGILE-GRID-scripts
-if [ "$2" != "-t" ]; then
-	git checkout $TAG_GRID
-else
-	echo "Use master version"
-fi
-cd ..
