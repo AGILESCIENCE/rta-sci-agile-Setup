@@ -6,8 +6,7 @@ trap exit ERR
 
 echo "---------"
 echo "Installing pipeline_manager"
-test -d /opt/prod/pipeline_manager || mkdir /opt/prod/pipeline_manager 
-cp -r pipeline_manager/scripts /opt/prod/pipeline_manager
+ln -s $(pwd)/pipeline_manager /opt/prod/pipeline_manager
 
 echo "---------"
 echo "Installing AGILE-ALERT-PIPE"
@@ -35,6 +34,8 @@ cd ..
 
 echo "---------"
 echo "Installing AGILE-MCAL-PIPE"
-test -d /opt/prod/AGILE-MCAL-PIPE || mkdir /opt/prod/AGILE-MCAL-PIPE/
-cp -r AGILE-MCAL-PIPE/pipe /opt/prod/AGILE-MCAL-PIPE
+ln -s $(pwd)/AGILE-MCAL-PIPE /opt/prod/AGILE-MCAL-PIPE
 
+echo "---------"
+echo "Installing AGILE-GUI-SCI"
+ln -s $(pwd)/AGILE-GUI-SCI /opt/prod/AGILE-GUI-SCI

@@ -12,7 +12,7 @@ if [ "$2" != "-t" ] ; then
 	#TAG_AGILEMCAL=v1.0.0
 	#TAG_HERMES=v1.0.0
 	#TAG_MORFEO=v1.0.0
-	#TAG_GCN=v1.0.0
+	#TsAG_GCN=v1.0.0
 	#TAG_GRID=v1.0.0
 fi
 
@@ -73,6 +73,16 @@ if [ "$2" != "-t" ]; then
 	git checkout $TAG_GCN
 else
 	echo "Use master version"
+fi
+cd ..
+
+echo "-------------"
+git clone https://$1@github.com/ASTRO-EDU/AGILE-GUI-SCI.git
+cd AGILE-GUI-SCI
+if [ "$2" != "-t" ]; then
+        git checkout $TAG_AGILEGUI
+else
+        echo "Use master version"
 fi
 cd ..
 
