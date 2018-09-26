@@ -39,3 +39,8 @@ ln -s $(pwd)/AGILE-MCAL-PIPE /opt/prod/AGILE-MCAL-PIPE
 echo "---------"
 echo "Installing AGILE-GUI-SCI"
 ln -s $(pwd)/AGILE-GUI-SCI /opt/prod/AGILE-GUI-SCI
+
+echo "---------"
+echo "Installing testunit" 
+ln -s $(pwd)/testunit /opt/prod/AGILEPIPE/testunit
+
