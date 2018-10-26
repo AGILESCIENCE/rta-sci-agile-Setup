@@ -6,3 +6,4 @@ AlarmGenerator_hermes/
 AlarmGenerator_morfeoalarm/
 AlertReceiver_GCNnetwork/
 pipeline_manager/
+testunit/__pycache__
