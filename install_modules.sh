@@ -6,41 +6,45 @@ trap exit ERR
 
 echo "---------"
 echo "Installing pipeline_manager"
-ln -s $(pwd)/pipeline_manager /opt/prod/pipeline_manager
+ln -s $(pwd)/pipeline_manager $1/pipeline_manager
 
 echo "---------"
 echo "Installing AGILE-ALERT-PIPE"
 cd AGILE-ALERT-PIPE
-./install.sh /opt/prod/AGILEPIPE
+./install.sh $1
 cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_hermes"
 cd AlarmGenerator_hermes
-./install.sh /opt/prod/AGILEPIPE
+./install.sh $1
 cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_morfeoalarm"
 cd AlarmGenerator_morfeoalarm
-./install.sh /opt/prod/AGILEPIPE
+./install.sh $1
 cd ..
 
 echo "---------"
 echo "Installing AlertReceiver_GCNnetwork"
 cd AlertReceiver_GCNnetwork
-./install.sh /opt/prod/AGILEPIPE
+./install.sh $1
 cd ..
 
 echo "---------"
 echo "Installing AGILE-MCAL-PIPE"
-ln -s $(pwd)/AGILE-MCAL-PIPE /opt/prod/AGILE-MCAL-PIPE
+ln -s $(pwd)/AGILE-MCAL-PIPE $1/AGILE-MCAL-PIPE
 
 echo "---------"
 echo "Installing AGILE-GUI-SCI"
-ln -s $(pwd)/AGILE-GUI-SCI /opt/prod/AGILE-GUI-SCI
+ln -s $(pwd)/AGILE-GUI-SCI $1/AGILE-GUI-SCI
 
 echo "---------"
-echo "Installing testunit" 
-ln -s $(pwd)/testunit /opt/prod/AGILEPIPE/testunit
-
+echo "Installing AGILEPIPE-scripts"
+cd AGILEPIPE-scripts
+cp * $1
+cd ..
+#echo "---------"
+#echo "Installing testunit"
+#ln -s $(pwd)/testunit $1/testunit

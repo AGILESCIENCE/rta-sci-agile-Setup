@@ -14,6 +14,7 @@ if [ "$2" != "-t" ] ; then
 	#TAG_MORFEO=v1.0.0
 	#TsAG_GCN=v1.0.0
 	#TAG_GRID=v1.0.0
+	#TAG_PIPE_SCRIPTS=v1.0.0
 fi
 
 echo "--------------"
@@ -86,3 +87,12 @@ else
 fi
 cd ..
 
+echo "-------------"
+git clone https://$1@github.com/AGILESCIENCE/AGILEPIPE-scripts
+cd AGILEPIPE-scripts
+if [ "$2" != "-t" ]; then
+        git checkout $TAG_AGILEGUI
+else
+        echo "Use master version"
+fi
+cd ..
