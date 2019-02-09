@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-#1) directory path where copy packages
+#1) directory path where copy software. Example: /opt/prod/
+#2) directory where install Alert Software. Example: /opt/prod/AGILEPIPE/
+
 
 trap exit ERR
 
@@ -11,25 +13,25 @@ ln -s $(pwd)/pipeline_manager $1/pipeline_manager
 echo "---------"
 echo "Installing AGILE-ALERT-PIPE"
 cd AGILE-ALERT-PIPE
-./install.sh $1
+./install.sh $2
 cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_hermes"
 cd AlarmGenerator_hermes
-./install.sh $1
+./install.sh $2
 cd ..
 
 echo "---------"
 echo "Installing AlarmGenerator_morfeoalarm"
 cd AlarmGenerator_morfeoalarm
-./install.sh $1
+./install.sh $2
 cd ..
 
 echo "---------"
 echo "Installing AlertReceiver_GCNnetwork"
 cd AlertReceiver_GCNnetwork
-./install.sh $1
+./install.sh $2
 cd ..
 
 echo "---------"
@@ -43,7 +45,7 @@ ln -s $(pwd)/AGILE-GUI-SCI $1/AGILE-GUI-SCI
 echo "---------"
 echo "Installing AGILEPIPE-scripts"
 cd AGILEPIPE-scripts
-cp * $1
+cp * $2
 cd ..
 #echo "---------"
 #echo "Installing testunit"
