@@ -41,6 +41,10 @@ echo "Installing AGILE-GUI-SCI"
 ln -s $(pwd)/AGILE-GUI-SCI $1/AGILE-GUI-SCI
 
 echo "---------"
+echo "Installing AGILE-GUI-SCI"
+ln -s $(pwd)/SUPERGRAWITA-GUI $1/SUPERGRAWITA-GUI
+
+echo "---------"
 echo "Installing AGILEPIPE-scripts"
 cd AGILEPIPE-scripts
 cp * $1

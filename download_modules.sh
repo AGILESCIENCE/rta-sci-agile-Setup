@@ -6,6 +6,7 @@ trap exit ERR
 echo $2
 if [ "$2" != "-t" ] ; then
 	echo "USE TAGS"
+        #TAG_SUPERGRAWITA_GUI=v1.0.0
 	#TAG_PIPEMANAGER=v1.0.2
 	#TAG_ALERTPIPE=v2.0.0
   #TAG_AGILEGUI=v1.0.0
@@ -82,6 +83,15 @@ git clone https://$1@github.com/ASTRO-EDU/AGILE-GUI-SCI.git
 cd AGILE-GUI-SCI
 if [ "$2" != "-t" ]; then
         git checkout $TAG_AGILEGUI
+else
+        echo "Use master version"
+fi
+cd ..
+echo "-------------"
+git clone https://$1@github.com/ASTRO-EDU/SUPERGRAWITA-GUI.git
+cd SUPERGRAWITA-GUI
+if [ "$2" != "-t" ]; then
+        git checkout $TAG_SUPERGRAWITA_GUI
 else
         echo "Use master version"
 fi
